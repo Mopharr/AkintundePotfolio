@@ -206,6 +206,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .tolLa {
   display: flex;
@@ -256,6 +257,7 @@
   background: url(/akinn.png);
   width: 463px;
   height: 457px;
+  margin-left: auto;
   mix-blend-mode: luminosity;
   border: 1px solid #999999;
   position: relative;
@@ -283,6 +285,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 .aactive {
   font-family: "Sen", sans-serif !important;
@@ -554,4 +557,170 @@
   font-size: 14px;
   line-height: 19px;
   color: #999999;
+}
+
+@media (max-width: 1600px) {
+  .main {
+    padding: 2em 1em;
+  }
+
+  .text h1 {
+    font-size: 140px;
+  }
+}
+@media (max-width: 1300px) {
+  .text h1 {
+    font-size: 115px;
+  }
+  .sk {
+    justify-content: space-around;
+  }
+  .skCon {
+    margin-right: 1em;
+    margin-bottom: 2em;
+  }
+}
+
+@media (max-width: 1083px) {
+  .text h1 {
+    font-size: 100px;
+    line-height: 97.1%;
+  }
+  .about {
+    width: 98%;
+    height: 100%;
+  }
+  .skill {
+    width: 98%;
+    height: 100%;
+  }
+  .work {
+    width: 98%;
+    height: 100%;
+  }
+  .project {
+    width: 98%;
+    height: 100%;
+  }
+  .blog {
+    width: 98%;
+    height: 100%;
+  }
+  .placeDesc{
+    height: 100%;
+  }
+}
+
+@media (max-width: 945px) {
+  .text h1 {
+    line-height: 108.7%;
+  }
+  .header img {
+    margin-top: 7em;
+  }
+  .tolLa {
+    width: 98%;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  .tools {
+    margin-right: 3em;
+  }
+  .skill2 ul {
+    display: flex;
+
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .contact {
+    width: 98%;
+  }
+  .contact h2 {
+    width: 98%;
+    height: 100%;
+  }
+  .contact p {
+    width: 98%;
+    height: 100%;
+
+  }
+  .place {
+    overflow-x: scroll;
+  }
+  .place ul {
+    display: flex;
+    overflow-x: scroll;
+        overflow-y: hidden;
+    height: 100%;
+    width: 1000px;
+    justify-content: space-around;
+    margin-bottom: -20px;
+  }
+  .placeDesc {
+    width: 98%;
+    margin-top: 3em;
+  }
+  .placeDesc h3{
+    height: 100%;
+  }
+  .placeDesc h3 ul {
+    padding-left: 40px;
+  }
+  .proCon {
+    width: 98%;
+    margin-bottom: 2em;
+  }
+  .proCon img {
+    width: 100%;
+    height: 250px;
+  }
+  .link {
+    margin-right: 1em;
+  }
+}
+@media (max-width: 530px) {
+  .main{
+    padding: 2em .3em;
+  }
+  .about{
+    padding: 2em 1em;
+  }
+  .placeDesc{
+    padding: 2em 1em;
+
+  }
+  .ttn{
+    padding: 0em 1em;
+
+  }
+  .text h1 {
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 97.1%;
+  }
+  .text p {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+  }
+  .navLink {
+    display: none;
+  }
+  .header img {
+    width: 98%;
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 375px) {
+    .text h1 {
+    font-weight: 700;
+    font-size: 70px;
+    line-height: 97.1%;
+  }
+  .text p {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 29px;
+  }
 }
