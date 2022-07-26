@@ -1,5 +1,6 @@
 import type { NextPage } from "next";
 import Head from "next/head";
+import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { FaLinkedinIn, FaTwitter, FaBehance } from "react-icons/fa";
 import { SiMedium } from 'react-icons/si'
@@ -16,9 +17,12 @@ const Home: NextPage = () => {
 
       <main className={styles.main}>
         <nav className={styles.top}>
-          <a href="/">
-            <img src="/crix.png" alt="logo" />
-          </a>
+          <Link href="/">
+            <a>
+              <img src="/crix.png" alt="logo" />
+            </a>
+          </Link>
+
           <div className={styles.navLink}>
             <ul>
               <li>About</li>
@@ -52,9 +56,9 @@ const Home: NextPage = () => {
             a keen interest and passion for designs. I have worked on a series
             of products on Fintech, Edutech, and in the Crypto industry. Some
             are still in the development stage, and others are in production
-            with impressive reviews 🙂. When I’m not working you will find me
-            playing video games. I am a big lover of music, that's why my
-            headset is always on to immerse myself in the zone and get the
+            with impressive reviews 🙂. When I&apos;m not working you will find
+            me playing video games. I am a big lover of music, that&apos;s why
+            my headset is always on to immerse myself in the zone and get the
             creative vibe going.
           </p>
           <div className={styles.dot3}></div>
