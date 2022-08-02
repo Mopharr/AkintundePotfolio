@@ -3,10 +3,16 @@ import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
 import { FaLinkedinIn, FaTwitter, FaBehance } from "react-icons/fa";
-import { SiMedium } from 'react-icons/si'
-
+import { SiMedium } from "react-icons/si";
+import { SetStateAction, useState } from "react";
 
 const Home: NextPage = () => {
+  const [slide, setSlide] = useState("1");
+
+  const click = (e: any) => {
+    setSlide(e.target.id);
+  };
+
   return (
     <div className={styles.container}>
       <Head>
@@ -36,8 +42,7 @@ const Home: NextPage = () => {
         </nav>
         <header className={styles.header}>
           <div className={styles.text}>
-            {/* <h1>𝔸𝕜𝕚𝕟𝕥𝕦𝕟𝕕𝕖 ℂ𝕒𝕦𝕝ℂ𝕣𝕚𝕔𝕜</h1> */}
-            <h1>Akintunde CaulCrick</h1>
+            <h1>Akintunde Caulcrick</h1>
             <p>Product Designer</p>
           </div>
           <div className={styles.imgg}>
@@ -131,11 +136,9 @@ const Home: NextPage = () => {
                   <h2>Language</h2>
                   <ul>
                     <li>
-                      {" "}
                       <div className={styles.dot}></div> HTML
                     </li>
                     <li>
-                      {" "}
                       <div className={styles.dot}></div> CSS
                     </li>
                   </ul>
@@ -173,13 +176,56 @@ const Home: NextPage = () => {
 
           <div className={styles.experience}>
             <div className={styles.place}>
+              <div className={styles.progress}>
+                <div
+                  className={`${
+                    slide === "2"
+                      ? styles.proMove
+                      : slide === "3"
+                      ? styles.proMove2
+                      : slide === "4"
+                      ? styles.proMove3
+                      : styles.proActive
+                  }`}
+                ></div>
+              </div>
               <ul>
-                <li className={styles.aactive}>
+                <li
+                  id="1"
+                  onClick={click}
+                  className={`${
+                    slide === "1" ? styles.aactive : styles.workLi
+                  }`}
+                >
                   01 Trove Finance, Lagos Nigeria
                 </li>
-                <li>02 Nippyeats Inc.</li>
-                <li>03 Atechcoins</li>
-                <li>04 UfitSub</li>
+                <li
+                  id="2"
+                  onClick={click}
+                  className={`${
+                    slide === "2" ? styles.aactive : styles.workLi
+                  }`}
+                >
+                  02 Nippyeats Inc.
+                </li>
+                <li
+                  id="3"
+                  onClick={click}
+                  className={`${
+                    slide === "3" ? styles.aactive : styles.workLi
+                  }`}
+                >
+                  03 Atechcoins
+                </li>
+                <li
+                  id="4"
+                  onClick={click}
+                  className={`${
+                    slide === "4" ? styles.aactive : styles.workLi
+                  }`}
+                >
+                  04 UfitSub
+                </li>
               </ul>
             </div>
             <div className={styles.placeDesc}>
@@ -187,36 +233,143 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <h3>
-                Trove Finance, Lagos Nigeria{" "}
-                <ul>
-                  <li>Product Designer</li>{" "}
-                </ul>
-              </h3>
+              {slide === "2" ? (
+                <div>
+                  <h3>
+                    Nippyeats Inc, Nassarawa
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>{" "}
+                    </ul>
+                  </h3>
 
-              <p>Jun 2021 - Present</p>
-              <div className={styles.ccont}>
-                <ul>
-                  <li>
-                    <div className={styles.ddot}></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-                    cursus enim ultricies nisl arcu pellentesque et. Sed non
-                    cursus magna in tellus.{" "}
-                  </li>
-                  <li>
-                    <div className={styles.ddot}></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-                    cursus enim ultricies nisl arcu pellentesque et. Sed non
-                    cursus magna in tellus.{" "}
-                  </li>
-                  <li>
-                    <div className={styles.ddot}></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-                    cursus enim ultricies nisl arcu pellentesque et. Sed non
-                    cursus magna in tellus.{" "}
-                  </li>
-                </ul>
-              </div>
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : slide === "3" ? (
+                <div>
+                  <h3>
+                    Atechcoins, Alaba Rago
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>{" "}
+                    </ul>
+                  </h3>
+
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : slide === "4" ? (
+                <div>
+                  <h3>
+                    UfitSub, HK
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>{" "}
+                    </ul>
+                  </h3>
+
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <h3>
+                    Trove Finance, Lagos Nigeria{" "}
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>{" "}
+                    </ul>
+                  </h3>
+
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.{" "}
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
