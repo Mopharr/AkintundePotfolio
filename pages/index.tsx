@@ -2,15 +2,21 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { FaLinkedinIn, FaTwitter, FaBehance } from "react-icons/fa";
+import { FaLinkedinIn, FaTwitter, FaBehance, FaTimes } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { SetStateAction, useState } from "react";
 
 const Home: NextPage = () => {
   const [slide, setSlide] = useState("1");
+  const [open, setOpen] = useState(false);
 
   const click = (e: any) => {
     setSlide(e.target.id);
+  };
+
+  const toggleOpen = () => {
+    setOpen((prev) => !prev);
   };
 
   return (
@@ -28,16 +34,25 @@ const Home: NextPage = () => {
               <img src="/crix.png" alt="logo" />
             </a>
           </Link>
+          <div className = {`${open ? styles.overAct : styles.over}`}>
+            <div className={styles.navLink}>
+              <ul>
+                <li>About</li>
+                <li>Experience</li>
+                <li>Project</li>
+                <li>Blog</li>
+                <li>Resume</li>
+                <li className={styles.active}>Get In Touch</li>
+              </ul>
+            </div>
+          </div>
 
-          <div className={styles.navLink}>
-            <ul>
-              <li>About</li>
-              <li>Experience</li>
-              <li>Project</li>
-              <li>Blog</li>
-              <li>Resume</li>
-              <li className={styles.active}>Get In Touch</li>
-            </ul>
+          <div className={styles.ham}>
+            {open ? (
+              <FaTimes onClick={toggleOpen} />
+            ) : (
+              <GiHamburgerMenu onClick={toggleOpen} />
+            )}
           </div>
         </nav>
         <header className={styles.header}>
@@ -48,6 +63,12 @@ const Home: NextPage = () => {
           <div className={styles.imgg}>
             <img src="/akin.png" alt="header" className={styles.img} />
           </div>
+          <section className={styles.link}>
+            <FaBehance className={styles.icon} />
+            <FaLinkedinIn className={styles.icon} />
+            <SiMedium className={styles.icon} />
+            <FaTwitter className={styles.icon} />
+          </section>
         </header>
         <section className={styles.about}>
           <div className={styles.dot1}></div>
@@ -509,12 +530,7 @@ const Home: NextPage = () => {
           </p>
           <button>Say Hello</button>
         </section>
-        <section className={styles.link}>
-          <FaBehance className={styles.icon} />
-          <FaLinkedinIn className={styles.icon} />
-          <SiMedium className={styles.icon} />
-          <FaTwitter className={styles.icon} />
-        </section>
+
         <footer className={styles.footer}>
           <p>Designed by Akintunde Caulcrick</p>
           <p>&#169; 2022 Crix. All Rights Reserved.</p>
