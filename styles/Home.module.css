@@ -31,9 +31,7 @@
 .ham {
   display: none;
 }
-.over {
-  display: none;
-}
+
 .active {
   display: flex;
   justify-content: center;

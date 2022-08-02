@@ -24,6 +24,10 @@ const Home: NextPage = () => {
       <Head>
         <title>Akintunde Caulcrick</title>
         <meta name="description" content="I am a product Designer" />
+        <meta
+          name="viewport"
+          content="width= devies-width, initial-scale = 1.0"
+        />
         <link rel="icon" href="/" />
       </Head>
 
@@ -34,7 +38,7 @@ const Home: NextPage = () => {
               <img src="/crix.png" alt="logo" />
             </a>
           </Link>
-          <div className = {`${open ? styles.overAct : styles.over}`}>
+          <div className={`${open ? styles.overAct : styles.over}`}>
             <div className={styles.navLink}>
               <ul>
                 <li>About</li>
