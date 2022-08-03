@@ -31,9 +31,7 @@
 .ham {
   display: none;
 }
-.over {
-  display: none;
-}
+
 .active {
   display: flex;
   justify-content: center;
@@ -94,21 +92,6 @@
   left: 0;
   bottom: -2%;
 }
-/* .imgg::before {
-  content: "";
-  z-index: 0;
-  position: absolute;
-  bottom: 0;
-  width: 619px;
-  height: 242.5px;
-  background: rgba(238, 152, 145, 0.25);
-  background: red;
-  opacity: 0.1;
-  border: 20px solid #ee9891;
-  transform: matrix(-1, 0, 0, 1, 0, 0);
-  transform: matrix(1.2, 0.2, -1, 0.9, 0, 20);
-} */
-
 .about {
   position: relative;
   margin: auto;
@@ -772,20 +755,38 @@
   }
   .place {
     flex-direction: column;
+    align-items: center;
+    width: 100%;
   }
   .place ul {
-    display: flex;
-    overflow-y: hidden;
+    display: inline-flex;
     height: 100%;
     justify-content: space-around;
+        width: 800px;
+    margin: auto;
   }
 
   .progress {
     transform: rotate(-90deg);
     margin: -8em auto -5em;
   }
-  .aactive {
-    margin-right: 2em;
+  .workLi{
+    margin-right: 1em;
+    width: 200px;
+  }
+  .aactive{
+    margin-right: 1em;
+    width: 200px;
+
+  }
+  .j1{
+    transform: translateX(-10%);
+  }
+    .j2{
+    transform: translateX(-20%);
+  }
+    .j3{
+    transform: translateX(-30%);
   }
   .placeDesc {
     width: 98%;
@@ -858,7 +859,7 @@
     transition: all 0.4s ease-in-out;
   }
   .overAct {
-     display: block;
+    display: block;
     background: rgba(0, 0, 0, 0.6);
     width: 100%;
     height: 100vh;
@@ -868,10 +869,18 @@
     z-index: 22;
     left: 0;
     transition: all 0.7s ease-in-out;
-
   }
   .navLink ul li {
     margin-bottom: 2em;
+  }
+    .j1{
+    transform: translateX(-15%);
+  }
+    .j2{
+    transform: translateX(-30%);
+  }
+    .j3{
+    transform: translateX(-40%);
   }
   .ham {
     width: 50px;
