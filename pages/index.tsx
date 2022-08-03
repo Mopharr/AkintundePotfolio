@@ -28,6 +28,8 @@ const Home: NextPage = () => {
           name="viewport"
           content="width= devies-width, initial-scale = 1.0"
         />
+        <meta name="theme-color" content="#000" />
+
         <link rel="icon" href="/" />
       </Head>
 
@@ -237,9 +239,7 @@ const Home: NextPage = () => {
                   id="2"
                   onClick={click}
                   className={`${
-                    slide === "2"
-                      ? `${styles.aactive}`
-                      : styles.workLi
+                    slide === "2" ? `${styles.aactive}` : styles.workLi
                   }`}
                 >
                   02 Nippyeats Inc.
@@ -248,9 +248,7 @@ const Home: NextPage = () => {
                   id="3"
                   onClick={click}
                   className={`${
-                    slide === "3"
-                      ? `${styles.aactive}`
-                      : styles.workLi
+                    slide === "3" ? `${styles.aactive}` : styles.workLi
                   }`}
                 >
                   03 Atechcoins
@@ -259,9 +257,7 @@ const Home: NextPage = () => {
                   id="4"
                   onClick={click}
                   className={`${
-                    slide === "4"
-                      ? `${styles.aactive}`
-                      : styles.workLi
+                    slide === "4" ? `${styles.aactive}` : styles.workLi
                   }`}
                 >
                   04 UfitSub
