@@ -146,7 +146,7 @@ const Home: NextPage = () => {
                     <div className={styles.dot}></div> Adope Status
                   </li>
                   <li>
-                    <div className={styles.dot}></div> Whimsical{" "}
+                    <div className={styles.dot}></div> Whimsical
                   </li>
                   <li>
                     <div className={styles.dot}></div> Protopie
@@ -172,7 +172,6 @@ const Home: NextPage = () => {
                   <h2>Management</h2>
                   <ul>
                     <li>
-                      {" "}
                       <div className={styles.dot}></div> Trello
                     </li>
                     <li>
@@ -214,7 +213,17 @@ const Home: NextPage = () => {
                   }`}
                 ></div>
               </div>
-              <ul>
+              <ul
+                className={`${
+                  slide === "2"
+                    ? styles.j1
+                    : slide === "3"
+                    ? styles.j2
+                    : slide === "4"
+                    ? styles.j3
+                    : styles.placeList
+                }`}
+              >
                 <li
                   id="1"
                   onClick={click}
@@ -228,7 +237,9 @@ const Home: NextPage = () => {
                   id="2"
                   onClick={click}
                   className={`${
-                    slide === "2" ? styles.aactive : styles.workLi
+                    slide === "2"
+                      ? `${styles.aactive}`
+                      : styles.workLi
                   }`}
                 >
                   02 Nippyeats Inc.
@@ -237,7 +248,9 @@ const Home: NextPage = () => {
                   id="3"
                   onClick={click}
                   className={`${
-                    slide === "3" ? styles.aactive : styles.workLi
+                    slide === "3"
+                      ? `${styles.aactive}`
+                      : styles.workLi
                   }`}
                 >
                   03 Atechcoins
@@ -246,7 +259,9 @@ const Home: NextPage = () => {
                   id="4"
                   onClick={click}
                   className={`${
-                    slide === "4" ? styles.aactive : styles.workLi
+                    slide === "4"
+                      ? `${styles.aactive}`
+                      : styles.workLi
                   }`}
                 >
                   04 UfitSub
@@ -264,7 +279,7 @@ const Home: NextPage = () => {
                     Nippyeats Inc, Nassarawa
                     <ul>
                       <div className={styles.ddot}></div>
-                      <li>Product Designer</li>{" "}
+                      <li>Product Designer</li>
                     </ul>
                   </h3>
 
@@ -275,19 +290,19 @@ const Home: NextPage = () => {
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                     </ul>
                   </div>
@@ -298,7 +313,7 @@ const Home: NextPage = () => {
                     Atechcoins, Alaba Rago
                     <ul>
                       <div className={styles.ddot}></div>
-                      <li>Product Designer</li>{" "}
+                      <li>Product Designer</li>
                     </ul>
                   </h3>
 
@@ -309,19 +324,19 @@ const Home: NextPage = () => {
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                     </ul>
                   </div>
@@ -332,7 +347,7 @@ const Home: NextPage = () => {
                     UfitSub, HK
                     <ul>
                       <div className={styles.ddot}></div>
-                      <li>Product Designer</li>{" "}
+                      <li>Product Designer</li>
                     </ul>
                   </h3>
 
@@ -343,19 +358,19 @@ const Home: NextPage = () => {
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                     </ul>
                   </div>
@@ -363,10 +378,10 @@ const Home: NextPage = () => {
               ) : (
                 <div>
                   <h3>
-                    Trove Finance, Lagos Nigeria{" "}
+                    Trove Finance, Lagos Nigeria
                     <ul>
                       <div className={styles.ddot}></div>
-                      <li>Product Designer</li>{" "}
+                      <li>Product Designer</li>
                     </ul>
                   </h3>
 
@@ -377,19 +392,19 @@ const Home: NextPage = () => {
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.{" "}
+                        non cursus magna in tellus.
                       </li>
                     </ul>
                   </div>
