@@ -547,6 +547,12 @@ const Home: NextPage = () => {
         </section>
 
         <footer className={styles.footer}>
+          <section className={styles.link}>
+            <FaBehance className={styles.icon} />
+            <FaLinkedinIn className={styles.icon} />
+            <SiMedium className={styles.icon} />
+            <FaTwitter className={styles.icon} />
+          </section>
           <p>Designed by Akintunde Caulcrick</p>
           <p>&#169; 2022 Crix. All Rights Reserved.</p>
         </footer>
