@@ -599,7 +599,8 @@
 }
 .blog .proCon img {
   width: 100%;
-  height: 373px;
+  height: 350px;
+  object-fit: cover;
 }
 .contact {
   width: 797px;
@@ -805,9 +806,10 @@
   .place ul {
     display: inline-flex;
     height: 100%;
-    justify-content: space-around;
-    width: 800px;
+    justify-content: unset;
+    width: 1000px;
     margin: auto;
+    transition: all 0.4s ease-in-out;
   }
 
   .progress {
@@ -816,28 +818,29 @@
   }
   .workLi {
     margin-right: 1em;
-    width: 200px;
+    width: 250px;
+    /* margin-right: 2em; */
   }
   .aactive {
     margin-right: 1em;
-    width: 200px;
+    width: 250px;
   }
-  .jhjh{
-    width: 150px !important ; 
+  .nnh {
+    margin-right: 1em;
+    width: 200px !important;
   }
- 
-  .hhj {
-    width: 150px;
+  .njh{
+  margin-right: 1em;
+    width: 200px !important;
   }
-
   .j1 {
-    transform: translateX(-10%);
+    transform: translateX(-15%);
   }
   .j2 {
-    transform: translateX(-20%);
+    transform: translateX(-25%);
   }
   .j3 {
-    transform: translateX(-30%);
+    transform: translateX(-35%);
   }
   .placeDesc {
     width: 98%;
@@ -961,14 +964,12 @@
   .navLink ul li {
     margin-bottom: 2em;
   }
-  .j1 {
-    transform: translateX(-15%);
-  }
+
   .j2 {
-    transform: translateX(-30%);
+    transform: translateX(-39%);
   }
   .j3 {
-    transform: translateX(-40%);
+    transform: translateX(-60%);
   }
   .ham {
     width: 50px;
@@ -1005,14 +1006,13 @@
     transform: translateX(-20%);
   }
   .j2 {
-    transform: translateX(-35%);
+    transform: translateX(-42%);
   }
   .j3 {
-    transform: translateX(-45%);
+    transform: translateX(-60%);
   }
   .header img {
     width: 490px;
     margin-left: -7em;
   }
-
 }

@@ -257,8 +257,8 @@ const Home: NextPage = () => {
                   onClick={click}
                   className={`${
                     slide === "3"
-                      ? `${styles.aactive} ${styles.jhjh}`
-                      : `${styles.workLi} ${styles.hhj}`
+                      ? `${styles.aactive} ${styles.nnh}`
+                      : `${styles.workLi} ${styles.njh}`
                   }`}
                 >
                   03 Atechcoins
