@@ -662,6 +662,9 @@
   line-height: 19px;
   color: #999999;
 }
+.footer .link {
+  display: none;
+}
 
 @media (max-width: 1600px) {
   .main {
@@ -819,6 +822,21 @@
   .main {
     padding: 1em 0.3em;
   }
+  
+  .footer .link{
+      display: flex;
+    flex-direction: row;
+    width: 50%;
+    margin: auto;
+    position: unset;
+  }
+  .footer .link .icon{
+    margin: 0 auto .5em;
+  }
+  .header .link{
+    display: none;
+  }
+
   .about {
     padding: 2em 1em;
   }
