@@ -19,6 +19,8 @@ const Home: NextPage = () => {
     setOpen((prev) => !prev);
   };
 
+  
+
   return (
     <div className={styles.container}>
       <Head>
@@ -30,7 +32,7 @@ const Home: NextPage = () => {
         />
         <meta name="theme-color" content="#000" />
 
-        <link rel="icon" href="/" />
+        <link rel="icon" href="/Favicon.png" />
       </Head>
 
       <main className={styles.main}>
@@ -62,18 +64,24 @@ const Home: NextPage = () => {
           </div>
         </nav>
         <header className={styles.header}>
-          <div className={styles.text}>
-            <h1>Akintunde Caulcrick</h1>
-            <p>Product Designer</p>
+          <div className={styles.headerDiv}>
+            <div className={styles.text}>
+              <h1>Akintunde Caulcrick</h1>
+              <p>Product Designer</p>
+            </div>
+            <div className={styles.imgg}>
+              <img src="/headImg.png" alt="header" className={styles.img} />
+            </div>
           </div>
-          <div className={styles.imgg}>
-            <img src="/akin.png" alt="header" className={styles.img} />
-          </div>
+
           <section className={styles.link}>
-            <FaBehance className={styles.icon} />
-            <FaLinkedinIn className={styles.icon} />
-            <SiMedium className={styles.icon} />
-            <FaTwitter className={styles.icon} />
+            <div className={styles.linnkk}>
+              <FaBehance className={styles.icon} />
+              <FaLinkedinIn className={styles.icon} />
+              <SiMedium className={styles.icon} />
+              <FaTwitter className={styles.icon} />
+            </div>
+            <div className={styles.straight}></div>
           </section>
         </header>
         <section className={styles.about}>
@@ -239,7 +247,7 @@ const Home: NextPage = () => {
                   id="2"
                   onClick={click}
                   className={`${
-                    slide === "2" ? `${styles.aactive}` : styles.workLi
+                    slide === "2" ? `${styles.aactive} ` : styles.workLi
                   }`}
                 >
                   02 Nippyeats Inc.
@@ -248,7 +256,9 @@ const Home: NextPage = () => {
                   id="3"
                   onClick={click}
                   className={`${
-                    slide === "3" ? `${styles.aactive}` : styles.workLi
+                    slide === "3"
+                      ? `${styles.aactive} ${styles.jhjh}`
+                      : `${styles.workLi} ${styles.hhj}`
                   }`}
                 >
                   03 Atechcoins
