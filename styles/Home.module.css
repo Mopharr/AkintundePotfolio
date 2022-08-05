@@ -56,8 +56,10 @@
 }
 .headerDiv {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
-
 .text h1 {
   font-family: "Sen", sans-serif;
   font-style: normal;
@@ -429,6 +431,7 @@
   color: #cccccc;
   align-items: center;
   height: 29px;
+  margin-bottom: 1em;
 }
 .placeDesc h3 ul {
   padding: 0;
@@ -829,8 +832,8 @@
     margin-right: 1em;
     width: 200px !important;
   }
-  .njh{
-  margin-right: 1em;
+  .njh {
+    margin-right: 1em;
     width: 200px !important;
   }
   .j1 {
@@ -850,6 +853,7 @@
     height: 100%;
     flex-direction: column;
     align-items: flex-start;
+    margin-bottom: .4em;
   }
   .placeDesc h3 ul {
     margin: 0.3em 0 0 0;
