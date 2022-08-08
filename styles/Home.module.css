@@ -364,7 +364,7 @@
   border-radius: 10px;
   margin-right: 1em;
   position: relative;
-  width: 10px;
+  width: 6px;
 }
 
 .proActive {
@@ -372,8 +372,8 @@
   height: 40px;
   background-color: #fff;
   top: 0;
-  width: 10px;
-  margin-left: -4px;
+  width: 7px;
+  margin-left: -3px;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -382,8 +382,8 @@
   top: 25%;
   height: 40px;
   background-color: #fff;
-  width: 10px;
-  margin-left: -4px;
+  width: 6px;
+  margin-left: -3px;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -392,8 +392,8 @@
   top: 55%;
   height: 40px;
   background-color: #fff;
-  width: 10px;
-  margin-left: -4px;
+  width: 6px;
+  margin-left: -3px;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -402,8 +402,8 @@
   top: 85%;
   height: 40px;
   background-color: #fff;
-  width: 10px;
-  margin-left: -4px;
+  width: 6px;
+  margin-left: -2px;
   border-radius: 10px;
   transition: all 0.3s ease;
 }
@@ -993,6 +993,26 @@
     width: 98%;
     margin: 0 auto 2em;
   }
+  .skill {
+    padding: 3em 0 2em;
+  }
+  .work {
+    padding: 1.3em 0 2em;
+  }
+  .project {
+    padding: 2em 0;
+  }
+  .project > div{
+    margin-bottom: 2em;
+  }
+  .blog {
+    padding: 2em 0;
+  }
+  .contact {
+    padding: 2em 0;
+  }
+
+
 }
 
 @media (max-width: 375px) {
