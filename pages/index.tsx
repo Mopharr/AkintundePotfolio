@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaTwitter, FaBehance, FaTimes } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SetStateAction, useState } from "react";
-
+import Fade from 'react-reveal'
 const Home: NextPage = () => {
   const [slide, setSlide] = useState("1");
   const [open, setOpen] = useState(false);
