@@ -2,17 +2,37 @@ import type { NextPage } from "next";
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Home.module.css";
-import { FaLinkedinIn, FaTwitter, FaBehance } from "react-icons/fa";
-import { SiMedium } from 'react-icons/si'
-
-
+import { FaLinkedinIn, FaTwitter, FaBehance, FaTimes } from "react-icons/fa";
+import { SiMedium } from "react-icons/si";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { SetStateAction, useState } from "react";
+import Fade from 'react-reveal'
 const Home: NextPage = () => {
+  const [slide, setSlide] = useState("1");
+  const [open, setOpen] = useState(false);
+
+  const click = (e: any) => {
+    setSlide(e.target.id);
+  };
+
+  const toggleOpen = () => {
+    setOpen((prev) => !prev);
+  };
+
+  
+
   return (
     <div className={styles.container}>
       <Head>
         <title>Akintunde Caulcrick</title>
         <meta name="description" content="I am a product Designer" />
-        <link rel="icon" href="/" />
+        <meta
+          name="viewport"
+          content="width= devies-width, initial-scale = 1.0"
+        />
+        <meta name="theme-color" content="#000" />
+
+        <link rel="icon" href="/Favicon.png" />
       </Head>
 
       <main className={styles.main}>
@@ -22,27 +42,47 @@ const Home: NextPage = () => {
               <img src="/crix.png" alt="logo" />
             </a>
           </Link>
+          <div className={`${open ? styles.overAct : styles.over}`}>
+            <div className={styles.navLink}>
+              <ul>
+                <li>About</li>
+                <li>Experience</li>
+                <li>Project</li>
+                <li>Blog</li>
+                <li>Resume</li>
+                <li className={styles.active}>Get In Touch</li>
+              </ul>
+            </div>
+          </div>
 
-          <div className={styles.navLink}>
-            <ul>
-              <li>About</li>
-              <li>Experience</li>
-              <li>Project</li>
-              <li>Blog</li>
-              <li>Resume</li>
-              <li className={styles.active}>Get In Touch</li>
-            </ul>
+          <div className={styles.ham}>
+            {open ? (
+              <FaTimes onClick={toggleOpen} />
+            ) : (
+              <GiHamburgerMenu onClick={toggleOpen} />
+            )}
           </div>
         </nav>
         <header className={styles.header}>
-          <div className={styles.text}>
-            {/* <h1>𝔸𝕜𝕚𝕟𝕥𝕦𝕟𝕕𝕖 ℂ𝕒𝕦𝕝ℂ𝕣𝕚𝕔𝕜</h1> */}
-            <h1>Akintunde CaulCrick</h1>
-            <p>Product Designer</p>
+          <div className={styles.headerDiv}>
+            <div className={styles.text}>
+              <h1>Akintunde Caulcrick</h1>
+              <p>Product Designer</p>
+            </div>
+            <div className={styles.imgg}>
+              <img src="/headImg.png" alt="header" className={styles.img} />
+            </div>
           </div>
-          <div className={styles.imgg}>
-            <img src="/akin.png" alt="header" className={styles.img} />
-          </div>
+
+          <section className={styles.link}>
+            <div className={styles.linnkk}>
+              <FaBehance className={styles.icon} />
+              <FaLinkedinIn className={styles.icon} />
+              <SiMedium className={styles.icon} />
+              <FaTwitter className={styles.icon} />
+            </div>
+            <div className={styles.straight}></div>
+          </section>
         </header>
         <section className={styles.about}>
           <div className={styles.dot1}></div>
@@ -116,7 +156,7 @@ const Home: NextPage = () => {
                     <div className={styles.dot}></div> Adope Status
                   </li>
                   <li>
-                    <div className={styles.dot}></div> Whimsical{" "}
+                    <div className={styles.dot}></div> Whimsical
                   </li>
                   <li>
                     <div className={styles.dot}></div> Protopie
@@ -131,11 +171,9 @@ const Home: NextPage = () => {
                   <h2>Language</h2>
                   <ul>
                     <li>
-                      {" "}
                       <div className={styles.dot}></div> HTML
                     </li>
                     <li>
-                      {" "}
                       <div className={styles.dot}></div> CSS
                     </li>
                   </ul>
@@ -144,7 +182,6 @@ const Home: NextPage = () => {
                   <h2>Management</h2>
                   <ul>
                     <li>
-                      {" "}
                       <div className={styles.dot}></div> Trello
                     </li>
                     <li>
@@ -173,13 +210,68 @@ const Home: NextPage = () => {
 
           <div className={styles.experience}>
             <div className={styles.place}>
-              <ul>
-                <li className={styles.aactive}>
+              <div className={styles.progress}>
+                <div
+                  className={`${
+                    slide === "2"
+                      ? styles.proMove
+                      : slide === "3"
+                      ? styles.proMove2
+                      : slide === "4"
+                      ? styles.proMove3
+                      : styles.proActive
+                  }`}
+                ></div>
+              </div>
+              <ul
+                className={`${
+                  slide === "2"
+                    ? styles.j1
+                    : slide === "3"
+                    ? styles.j2
+                    : slide === "4"
+                    ? styles.j3
+                    : styles.placeList
+                }`}
+              >
+                <li
+                  id="1"
+                  onClick={click}
+                  className={`${
+                    slide === "1" ? styles.aactive : styles.workLi
+                  }`}
+                >
                   01 Trove Finance, Lagos Nigeria
                 </li>
-                <li>02 Nippyeats Inc.</li>
-                <li>03 Atechcoins</li>
-                <li>04 UfitSub</li>
+                <li
+                  id="2"
+                  onClick={click}
+                  className={`${
+                    slide === "2" ? `${styles.aactive} ` : styles.workLi
+                  }`}
+                >
+                  02 Nippyeats Inc.
+                </li>
+                <li
+                  id="3"
+                  onClick={click}
+                  className={`${
+                    slide === "3"
+                      ? `${styles.aactive} ${styles.nnh}`
+                      : `${styles.workLi} ${styles.njh}`
+                  }`}
+                >
+                  03 Atechcoins
+                </li>
+                <li
+                  id="4"
+                  onClick={click}
+                  className={`${
+                    slide === "4" ? `${styles.aactive}` : styles.workLi
+                  }`}
+                >
+                  04 UfitSub
+                </li>
               </ul>
             </div>
             <div className={styles.placeDesc}>
@@ -187,36 +279,143 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <h3>
-                Trove Finance, Lagos Nigeria{" "}
-                <ul>
-                  <li>Product Designer</li>{" "}
-                </ul>
-              </h3>
+              {slide === "2" ? (
+                <div>
+                  <h3>
+                    Nippyeats Inc, Nassarawa
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>
+                    </ul>
+                  </h3>
 
-              <p>Jun 2021 - Present</p>
-              <div className={styles.ccont}>
-                <ul>
-                  <li>
-                    <div className={styles.ddot}></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-                    cursus enim ultricies nisl arcu pellentesque et. Sed non
-                    cursus magna in tellus.{" "}
-                  </li>
-                  <li>
-                    <div className={styles.ddot}></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-                    cursus enim ultricies nisl arcu pellentesque et. Sed non
-                    cursus magna in tellus.{" "}
-                  </li>
-                  <li>
-                    <div className={styles.ddot}></div>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Est
-                    cursus enim ultricies nisl arcu pellentesque et. Sed non
-                    cursus magna in tellus.{" "}
-                  </li>
-                </ul>
-              </div>
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : slide === "3" ? (
+                <div>
+                  <h3>
+                    Atechcoins, Alaba Rago
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>
+                    </ul>
+                  </h3>
+
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : slide === "4" ? (
+                <div>
+                  <h3>
+                    UfitSub, HK
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>
+                    </ul>
+                  </h3>
+
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              ) : (
+                <div>
+                  <h3>
+                    Trove Finance, Lagos Nigeria
+                    <ul>
+                      <div className={styles.ddot}></div>
+                      <li>Product Designer</li>
+                    </ul>
+                  </h3>
+
+                  <p>Jun 2021 - Present</p>
+                  <div className={styles.ccont}>
+                    <ul>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                      <li>
+                        <div className={styles.ddot}></div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
+                        non cursus magna in tellus.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
         </section>
@@ -356,13 +555,14 @@ const Home: NextPage = () => {
           </p>
           <button>Say Hello</button>
         </section>
-        <section className={styles.link}>
-          <FaBehance className={styles.icon} />
-          <FaLinkedinIn className={styles.icon} />
-          <SiMedium className={styles.icon} />
-          <FaTwitter className={styles.icon} />
-        </section>
+
         <footer className={styles.footer}>
+          <section className={styles.link}>
+            <FaBehance className={styles.icon} />
+            <FaLinkedinIn className={styles.icon} />
+            <SiMedium className={styles.icon} />
+            <FaTwitter className={styles.icon} />
+          </section>
           <p>Designed by Akintunde Caulcrick</p>
           <p>&#169; 2022 Crix. All Rights Reserved.</p>
         </footer>
