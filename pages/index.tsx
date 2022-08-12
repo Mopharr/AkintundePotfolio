@@ -31,10 +31,6 @@ const Home: NextPage = () => {
         <meta name="theme-color" content="#000" />
 
         <link rel="icon" href="/Favicon.png" />
-        <link
-          rel="stylesheet"
-          href="../styles/FontsFree-Net-NewYorkExtraLargeRegular.ttf"
-        />
       </Head>
 
       <main className={styles.main}>
@@ -244,7 +240,9 @@ const Home: NextPage = () => {
                     id="1"
                     onClick={click}
                     className={`${
-                      slide === "1" ?` ${styles.aactive} ${styles.tro}` : `${styles.workLi} ${styles.tro2}`
+                      slide === "1"
+                        ? ` ${styles.aactive} ${styles.tro}`
+                        : `${styles.workLi} ${styles.tro2}`
                     }`}
                   >
                     01 Trove Finance, Lagos Nigeria
@@ -291,23 +289,11 @@ const Home: NextPage = () => {
               <div className={styles.dot4}></div>
               {slide === "2" ? (
                 <div>
-                  <h3>
-                    Nippyeats Inc, Nassarawa
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>Nippyeats Inc, Nassarawa - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -325,23 +311,11 @@ const Home: NextPage = () => {
                 </div>
               ) : slide === "3" ? (
                 <div>
-                  <h3>
-                    Atechcoins, Alaba Rago
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>Atechcoins, Alaba Rago - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -359,23 +333,11 @@ const Home: NextPage = () => {
                 </div>
               ) : slide === "4" ? (
                 <div>
-                  <h3>
-                    UfitSub, HK
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>UfitSub, HK - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -393,23 +355,11 @@ const Home: NextPage = () => {
                 </div>
               ) : (
                 <div>
-                  <h3>
-                    Trove Finance, Lagos Nigeria
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>Trove Finance, Lagos Nigeria - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
