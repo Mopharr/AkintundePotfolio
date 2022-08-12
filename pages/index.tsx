@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaTwitter, FaBehance, FaTimes } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SetStateAction, useState } from "react";
-import Fade from 'react-reveal'
+// import Fade from 'react-reveal'
 const Home: NextPage = () => {
   const [slide, setSlide] = useState("1");
   const [open, setOpen] = useState(false);
@@ -18,8 +18,6 @@ const Home: NextPage = () => {
   const toggleOpen = () => {
     setOpen((prev) => !prev);
   };
-
-  
 
   return (
     <div className={styles.container}>
@@ -50,7 +48,10 @@ const Home: NextPage = () => {
                 <li>Project</li>
                 <li>Blog</li>
                 <li>Resume</li>
-                <li className={styles.active}>Get In Touch</li>
+                <div className={styles.navBtn}>
+                  <button className={styles.nBtn}>Get In Touch</button>
+                  <button className={styles.nbtn}></button>
+                </div>
               </ul>
             </div>
           </div>
@@ -206,74 +207,81 @@ const Home: NextPage = () => {
           </div>
         </section>
         <section className={styles.work}>
-          <h2>Where I’ve worked</h2>
-
           <div className={styles.experience}>
-            <div className={styles.place}>
-              <div className={styles.progress}>
-                <div
+            <div className={styles.new}>
+              <h2>Where I’ve worked</h2>
+              <div className={styles.place}>
+                <div className={styles.progress}>
+                  <div
+                    className={`${
+                      slide === "2"
+                        ? styles.proMove
+                        : slide === "3"
+                        ? styles.proMove2
+                        : slide === "4"
+                        ? styles.proMove3
+                        : styles.proActive
+                    }`}
+                  ></div>
+                </div>
+
+                <ul
                   className={`${
                     slide === "2"
-                      ? styles.proMove
+                      ? styles.j1
                       : slide === "3"
-                      ? styles.proMove2
+                      ? styles.j2
                       : slide === "4"
-                      ? styles.proMove3
-                      : styles.proActive
+                      ? styles.j3
+                      : styles.placeList
                   }`}
-                ></div>
+                >
+                  <li
+                    id="1"
+                    onClick={click}
+                    className={`${
+                      slide === "1"
+                        ? ` ${styles.aactive} ${styles.tro}`
+                        : `${styles.workLi} ${styles.tro2}`
+                    }`}
+                  >
+                    01 Trove Finance, Lagos Nigeria
+                  </li>
+                  <li
+                    id="2"
+                    onClick={click}
+                    className={`${
+                      slide === "2" ? `${styles.aactive} ` : styles.workLi
+                    }`}
+                  >
+                    02 Nippyeats Inc.
+                  </li>
+                  <li
+                    id="3"
+                    onClick={click}
+                    className={`${
+                      slide === "3"
+                        ? `${styles.aactive} ${styles.nnh}`
+                        : `${styles.workLi} ${styles.njh}`
+                    }`}
+                  >
+                    03 Atechcoins
+                  </li>
+                  <li
+                    id="4"
+                    onClick={click}
+                    className={`${
+                      slide === "4"
+                        ? `${styles.aactive} ${styles.nnh}`
+                        : `${styles.workLi} ${styles.njh}`
+                    }`}
+                  >
+                    04 UfitSub
+                  </li>
+                </ul>
               </div>
-              <ul
-                className={`${
-                  slide === "2"
-                    ? styles.j1
-                    : slide === "3"
-                    ? styles.j2
-                    : slide === "4"
-                    ? styles.j3
-                    : styles.placeList
-                }`}
-              >
-                <li
-                  id="1"
-                  onClick={click}
-                  className={`${
-                    slide === "1" ? styles.aactive : styles.workLi
-                  }`}
-                >
-                  01 Trove Finance, Lagos Nigeria
-                </li>
-                <li
-                  id="2"
-                  onClick={click}
-                  className={`${
-                    slide === "2" ? `${styles.aactive} ` : styles.workLi
-                  }`}
-                >
-                  02 Nippyeats Inc.
-                </li>
-                <li
-                  id="3"
-                  onClick={click}
-                  className={`${
-                    slide === "3"
-                      ? `${styles.aactive} ${styles.nnh}`
-                      : `${styles.workLi} ${styles.njh}`
-                  }`}
-                >
-                  03 Atechcoins
-                </li>
-                <li
-                  id="4"
-                  onClick={click}
-                  className={`${
-                    slide === "4" ? `${styles.aactive}` : styles.workLi
-                  }`}
-                >
-                  04 UfitSub
-                </li>
-              </ul>
             </div>
+
             <div className={styles.placeDesc}>
               <div className={styles.dot1}></div>
               <div className={styles.dot2}></div>
@@ -281,23 +289,11 @@ const Home: NextPage = () => {
               <div className={styles.dot4}></div>
               {slide === "2" ? (
                 <div>
-                  <h3>
-                    Nippyeats Inc, Nassarawa
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>Nippyeats Inc, Nassarawa - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -315,23 +311,11 @@ const Home: NextPage = () => {
                 </div>
               ) : slide === "3" ? (
                 <div>
-                  <h3>
-                    Atechcoins, Alaba Rago
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>Atechcoins, Alaba Rago - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -349,23 +333,11 @@ const Home: NextPage = () => {
                 </div>
               ) : slide === "4" ? (
                 <div>
-                  <h3>
-                    UfitSub, HK
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>UfitSub, HK - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -383,23 +355,11 @@ const Home: NextPage = () => {
                 </div>
               ) : (
                 <div>
-                  <h3>
-                    Trove Finance, Lagos Nigeria
-                    <ul>
-                      <div className={styles.ddot}></div>
-                      <li>Product Designer</li>
-                    </ul>
-                  </h3>
+                  <h3>Trove Finance, Lagos Nigeria - Product Designer</h3>
 
                   <p>Jun 2021 - Present</p>
                   <div className={styles.ccont}>
                     <ul>
-                      <li>
-                        <div className={styles.ddot}></div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Est cursus enim ultricies nisl arcu pellentesque et. Sed
-                        non cursus magna in tellus.
-                      </li>
                       <li>
                         <div className={styles.ddot}></div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit.
@@ -442,7 +402,10 @@ const Home: NextPage = () => {
                   Quam nisi, in pellentesque at ut rhoncus in. Suspendisse non,
                   nisi, dictumst nulla egestas.
                 </p>
-                <button>View Project</button>
+                <div className={styles.relBtn}>
+                  <button className={styles.relBtnN}>View Project</button>
+                  <button className={styles.nbn}></button>
+                </div>
               </div>
             </div>
             <div className={styles.proCon}>
@@ -450,7 +413,7 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <img src="/tor.png" alt="project" />
+              <img src="/tea.png" alt="project" />
               <div className={styles.ttn}>
                 <h3>Trove Finance, Lagos Nigeria</h3>
                 <ul>
@@ -465,7 +428,10 @@ const Home: NextPage = () => {
                   Quam nisi, in pellentesque at ut rhoncus in. Suspendisse non,
                   nisi, dictumst nulla egestas.
                 </p>
-                <button>View Project</button>
+                <div className={styles.relBtn}>
+                  <button className={styles.relBtnN}>View Project</button>
+                  <button className={styles.nbn}></button>
+                </div>
               </div>
             </div>
           </div>
@@ -490,7 +456,10 @@ const Home: NextPage = () => {
                   Quam nisi, in pellentesque at ut rhoncus in. Suspendisse non,
                   nisi, dictumst nulla egestas.
                 </p>
-                <button>View Project</button>
+                <div className={styles.relBtn}>
+                  <button className={styles.relBtnN}>View Project</button>
+                  <button className={styles.nbn}></button>
+                </div>
               </div>
             </div>
             <div className={styles.proCon}>
@@ -498,7 +467,7 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <img src="/tor.png" alt="project" />
+              <img src="/tea.png" alt="project" />
               <div className={styles.ttn}>
                 <h3>Trove Finance, Lagos Nigeria</h3>
                 <ul>
@@ -513,7 +482,10 @@ const Home: NextPage = () => {
                   Quam nisi, in pellentesque at ut rhoncus in. Suspendisse non,
                   nisi, dictumst nulla egestas.
                 </p>
-                <button>View Project</button>
+                <div className={styles.relBtn}>
+                  <button className={styles.relBtnN}>View Project</button>
+                  <button className={styles.nbn}></button>
+                </div>
               </div>
             </div>
           </div>
@@ -540,7 +512,10 @@ const Home: NextPage = () => {
                 Quam nisi, in pellentesque at ut rhoncus in. Suspendisse non,
                 nisi, dictumst nulla egestas.
               </p>
-              <button>Read</button>
+              <div className={styles.relBtn}>
+                <button className={styles.relBtnN}>Read</button>
+                <button className={styles.nbn}></button>
+              </div>
             </div>
           </div>
         </section>
@@ -553,7 +528,10 @@ const Home: NextPage = () => {
             hackathon, or a basketball game. My inbox is always open. I’d try my
             best to answer your mail.
           </p>
-          <button>Say Hello</button>
+          <div className={styles.contactBtn}>
+            <button className={styles.ccBtn}>Say Hello</button>
+            <button className={styles.nnbtn}></button>
+          </div>
         </section>
 
         <footer className={styles.footer}>

@@ -1,5 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+
+@font-face {
+  font-family: "NewYork";
+  src: url(../styles/FontsFree-Net-NewYork.ttf);
+}
 
 .main {
   padding: 2em 5em;
@@ -20,7 +27,7 @@
 .navLink ul li {
   list-style: none;
   margin-right: 1.5em;
-  font-family: "Nunito Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -28,6 +35,39 @@
   color: #cccccc;
   display: flex;
   align-items: center;
+}
+.navLink ul .navBtn {
+  width: 102px;
+  height: 35px;
+  position: relative;
+}
+.nBtn {
+  width: 102px;
+  height: 35px;
+  position: absolute;
+  z-index: 11;
+  margin-right: 1.5em;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 19px;
+  background-color: #000000;
+  color: #cccccc;
+  border: 1px solid #cccccc;
+
+  display: flex;
+  align-items: center;
+}
+.nbtn {
+  position: absolute;
+  width: 102px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  right: -3%;
+  bottom: -8%;
+  z-index: 1;
 }
 .ham {
   display: none;
@@ -61,16 +101,13 @@
   align-items: center;
 }
 .text h1 {
-  font-family: "Sen", sans-serif;
+  font-family: "NewYork";
   font-style: normal;
-  font-weight: 700;
-  font-size: 156.035px;
-  line-height: 188px;
-  letter-spacing: -0.02em;
+  font-weight: lighter;
+  font-size: 132px;
+  line-height: 140px;
+  color: #cccccc;
   margin: 0px;
-  -webkit-text-stroke-width: 2.5px;
-  -webkit-text-stroke-color: #999999;
-  color: transparent;
 }
 .text p {
   font-family: "Sen", sans-serif;
@@ -156,22 +193,19 @@
 }
 
 .about h2 {
-  font-family: "Sen", sans-serif;
+ font-family: "NewYork";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 1px;
-  color: rgba(51, 51, 51, 0.3);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #999999;
+  line-height: 59px;
+  color: #cccccc;
   flex: none;
   order: 0;
   flex-grow: 0;
   margin: 0;
 }
 .about p {
-  font-family: "Nunito Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -190,19 +224,16 @@
 }
 
 .skill h2 {
-  font-family: "Sen", sans-serif;
+ font-family: "NewYork";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 1px;
-  color: rgba(51, 51, 51, 0.3);
-  /* border: 1px solid #999999; */
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #999999;
+  line-height: 59px;
+  color: #cccccc;
   flex: none;
   order: 0;
   flex-grow: 0;
+  margin-bottom: 1em;
 }
 .sk {
   display: flex;
@@ -250,8 +281,9 @@
 }
 .skill2 ul li {
   display: flex;
+  align-items: center;
   list-style: none;
-  font-family: "Nunito Sans";
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -260,15 +292,15 @@
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 .langMag {
   width: 275px;
 }
 
 .dot {
-  width: 16px;
-  height: 16px;
+  width: 8px;
+  height: 8px;
   border: 1px solid #999999;
   flex: none;
   order: 0;
@@ -308,18 +340,16 @@
   width: 1072px;
 }
 .work h2 {
-  font-family: "Sen", sans-serif;
+ font-family: "NewYork";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 1px;
-  color: rgba(51, 51, 51, 0.3);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #999999;
+  line-height: 59px;
+  color: #cccccc;
   flex: none;
   order: 0;
   flex-grow: 0;
+  margin: 0;
 }
 .experience {
   display: flex;
@@ -327,40 +357,46 @@
   align-items: center;
   flex-wrap: wrap;
 }
+.new {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  height: 297px;
+  justify-content: space-between;
+}
+
 .aactive {
-  font-family: "Sen", sans-serif !important;
+  font-family: "Open Sans" !important;
   font-style: normal !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   font-size: 24px !important;
-  line-height: 29px !important;
-  letter-spacing: 1px !important;
+  line-height: 33px !important;
+  letter-spacing: 0.07em !important;
   color: #cccccc !important;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
   list-style: none;
   cursor: pointer;
 }
 .place ul {
   padding: 0;
   margin: 0;
-  height: 260px;
+  height: 206px;
 }
 .place ul .workLi {
-  font-family: "Sen", sans-serif;
   list-style: none;
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
-  line-height: 29px;
-  letter-spacing: 1px;
-  color: rgba(51, 51, 51, 0.1);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: rgba(102, 102, 102, 0.35);
-  margin-bottom: 2em;
+  line-height: 33px;
+  letter-spacing: 0.07em;
+  color: #333333;
+  margin-bottom: 1em;
   cursor: pointer;
 }
 .progress {
   border: 4px solid #333333;
-  height: 260px;
+  height: 206px;
   border-radius: 10px;
   margin-right: 1em;
   position: relative;
@@ -371,7 +407,7 @@
   position: absolute;
   height: 40px;
   background-color: #fff;
-  top: 0;
+  top: -2%;
   width: 7px;
   margin-left: -3px;
   border-radius: 10px;
@@ -456,8 +492,8 @@
   margin-left: 1em;
 }
 .placeDesc p {
-  margin: 10px;
-  font-family: "Nunito Sans";
+  margin: 10px 0;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -478,7 +514,7 @@
 }
 .ccont ul li {
   display: flex;
-  font-family: "Nunito Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -493,18 +529,16 @@
   width: 1072px;
 }
 .project h2 {
-  font-family: "Sen", sans-serif;
+ font-family: "NewYork";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 1px;
-  color: rgba(51, 51, 51, 0.3);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #999999;
+  line-height: 59px;
+  color: #cccccc;
   flex: none;
   order: 0;
   flex-grow: 0;
+  margin-bottom: 1em;
 }
 
 .project > div {
@@ -519,6 +553,10 @@
   width: 508px;
   padding: 0em 0 3em;
   border: 1px solid #cccccc;
+}
+.proCon img {
+  height: 316px;
+  width: 100%;
 }
 
 .ttn {
@@ -545,7 +583,7 @@
 }
 .ttn ul li {
   margin-right: 2em;
-  font-family: "Nunito Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -553,8 +591,8 @@
   color: #999999;
 }
 .ttn p {
-  font-family: "Nunito Sans";
-  font-style: normal;
+ font-family: 'Open Sans';
+font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -565,17 +603,37 @@
   flex-grow: 0;
 }
 
-.ttn button {
-  padding: 0 20px;
-  height: 51px;
-  background: #000000;
-  border: 1px solid #cccccc;
-  font-family: "Nunito Sans";
+.relBtn {
+  position: relative;
+  width: 100px;
+  height: 35px;
+}
+.relBtnN {
+  width: 100px;
+  height: 35px;
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   color: #cccccc;
+  background-color: black;
+  border: 1px solid #cccccc;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: 11;
+}
+
+.nbn {
+  position: absolute;
+  width: 100px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  right: -3%;
+  bottom: -5%;
+  z-index: 1;
 }
 
 .blog {
@@ -584,18 +642,16 @@
   width: 1072px;
 }
 .blog h2 {
-  font-family: "Sen", sans-serif;
+ font-family: "NewYork";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 48px;
-  line-height: 58px;
-  letter-spacing: 1px;
-  color: rgba(51, 51, 51, 0.3);
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #999999;
+  line-height: 59px;
+  color: #cccccc;
   flex: none;
   order: 0;
   flex-grow: 0;
+  margin-bottom: 1em;
 }
 .blog .proCon {
   width: 100%;
@@ -611,25 +667,23 @@
   padding: 3em 0;
 }
 .contact h2 {
-  width: 645px;
-  height: 154px;
-  font-family: "Sen";
+  font-family: "NewYork";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 400;
   font-size: 64px;
-  line-height: 77px;
+  line-height: 78px;
   text-align: center;
-  letter-spacing: 1px;
-  color: rgba(51, 51, 51, 0.3);
-  -webkit-text-stroke-width: 1px;
+  color: #cccccc;
+  flex: none;
+  order: 0;
+  flex-grow: 0;
   margin: auto;
-  -webkit-text-stroke-color: #999999;
 }
 
 .contact p {
   width: 797px;
   margin: 1em auto;
-  font-family: "Nunito Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   text-align: center;
   font-weight: 400;
@@ -638,21 +692,41 @@
   text-align: center;
   color: #cccccc;
 }
-.contact button {
-  width: 126px;
-  height: 51px;
+.contact .ccBtn {
+  position: absolute;
+  top: 0%;
+  bottom: 0%;
+  z-index: 11;
+  width: 110px;
+  height: 35px;
   margin: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   background: #000000;
   border: 1px solid #cccccc;
-  font-family: "Nunito Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
   line-height: 19px;
   color: #cccccc;
+}
+.nnbtn {
+  position: absolute;
+  width: 110px;
+  height: 35px;
+  background-color: transparent;
+  border: 1px solid #cccccc;
+  right: -3%;
+  bottom: -5%;
+  z-index: 1;
+}
+.contactBtn {
+  width: 110px;
+  height: 35px;
+  position: relative;
+  margin: auto;
 }
 .link {
   width: 24px;
@@ -674,7 +748,7 @@
   text-align: center;
 }
 .footer p {
-  font-family: "Nunito Sans";
+  font-family: 'Open Sans';
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -806,11 +880,15 @@
     align-items: center;
     width: 100%;
   }
+  .new {
+    height: 200px;
+    width: 100%;
+  }
   .place ul {
     display: inline-flex;
     height: 100%;
     justify-content: unset;
-    width: 1000px;
+    width: 900px;
     margin: auto;
     transition: all 0.4s ease-in-out;
   }
@@ -822,11 +900,16 @@
   .workLi {
     margin-right: 1em;
     width: 250px;
-    /* margin-right: 2em; */
   }
   .aactive {
     margin-right: 1em;
     width: 250px;
+  }
+  .tro {
+    width: 255px;
+  }
+  .tro2 {
+    width: 255px;
   }
   .nnh {
     margin-right: 1em;
@@ -847,13 +930,13 @@
   }
   .placeDesc {
     width: 98%;
-    margin-top: 3em;
+    margin: 3em auto 0;
   }
   .placeDesc h3 {
     height: 100%;
     flex-direction: column;
     align-items: flex-start;
-    margin-bottom: .4em;
+    margin-bottom: 0.4em;
   }
   .placeDesc h3 ul {
     margin: 0.3em 0 0 0;
@@ -1002,7 +1085,7 @@
   .project {
     padding: 2em 0;
   }
-  .project > div{
+  .project > div {
     margin-bottom: 2em;
   }
   .blog {
@@ -1011,8 +1094,6 @@
   .contact {
     padding: 2em 0;
   }
-
-
 }
 
 @media (max-width: 375px) {
