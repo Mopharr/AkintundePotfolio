@@ -1,0 +1,106 @@
+.container {
+  background-color: rebeccapurple;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 111;
+}
+
+.box {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  border: #fff solid 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-name: Fade;
+  animation-duration: 3s;
+}
+
+@keyframes Fade {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0.5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.dot1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -5px;
+  top: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+
+.dot2 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  top: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+.dot3 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -5px;
+  bottom: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+.dot4 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  bottom: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 500px;
+}
+
+.logoImg {
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  animation: Logo;
+  animation-duration: 6s;
+  /* animation-delay: 3s; */
+}
+
+@keyframes Logo {
+  0% {
+    opacity: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 1;
+    left: 0%;
+  }
+}

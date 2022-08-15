@@ -2,7 +2,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Sen&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
 
-
 @font-face {
   font-family: "NewYork";
   src: url(../styles/FontsFree-Net-NewYork.ttf);
@@ -10,6 +9,8 @@
 
 .main {
   padding: 2em 5em;
+  max-width: 1366px;
+  margin: auto;
   background: #000000;
 }
 
@@ -27,7 +28,7 @@
 .navLink ul li {
   list-style: none;
   margin-right: 1.5em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -47,7 +48,7 @@
   position: absolute;
   z-index: 11;
   margin-right: 1.5em;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -66,7 +67,7 @@
   background-color: transparent;
   border: 1px solid #cccccc;
   right: -3%;
-  bottom: -8%;
+  bottom: -10%;
   z-index: 1;
 }
 .ham {
@@ -85,6 +86,7 @@
 .header {
   height: 100%;
   padding: 6em 0 8em;
+  margin-top: 2em;
   position: relative;
   background: #000000;
   display: flex;
@@ -93,6 +95,7 @@
 }
 .text {
   height: 120px;
+  padding-top: 1.5em;
 }
 .headerDiv {
   width: 100%;
@@ -104,17 +107,17 @@
   font-family: "NewYork";
   font-style: normal;
   font-weight: lighter;
-  font-size: 132px;
+  font-size: 135px;
   line-height: 140px;
   color: #cccccc;
   margin: 0px;
 }
 .text p {
-  font-family: "Sen", sans-serif;
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 700;
-  font-size: 36px;
-  line-height: 43px;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
   color: #cccccc;
   margin: 0;
 }
@@ -122,14 +125,14 @@
 .imgg {
   display: flex;
   position: relative;
-  width: 553.91px;
-  height: 526px;
+  height: 638px;
   margin: auto;
 }
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  display: block;
 }
 .imgg::after {
   content: "";
@@ -137,7 +140,27 @@
   width: 100%;
   height: 87px;
   position: absolute;
-  left: -5px;
+  left: 0px;
+  bottom: -2%;
+}
+.imgg22 {
+  display: flex;
+  position: relative;
+  height: 638px;
+  margin: auto;
+  display: none;
+}
+.img22 {
+  width: 100%;
+  object-fit: cover;
+}
+.imgg22::after {
+  content: "";
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0) 26.25%, #000000 47.83%);
+  width: 100%;
+  height: 87px;
+  position: absolute;
+  left: 0px;
   bottom: -2%;
 }
 
@@ -193,7 +216,7 @@
 }
 
 .about h2 {
- font-family: "NewYork";
+  font-family: "NewYork";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -205,7 +228,7 @@
   margin: 0;
 }
 .about p {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -224,7 +247,7 @@
 }
 
 .skill h2 {
- font-family: "NewYork";
+  font-family: "NewYork";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -233,7 +256,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
 }
 .sk {
   display: flex;
@@ -254,11 +277,11 @@
   justify-content: center;
 }
 .skCon p {
-  font-family: "Sen", sans-serif;
+  font-family: "Open Sans";
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 24px;
-  line-height: 29px;
+  line-height: 33px;
   letter-spacing: 1px;
   color: #cccccc;
 }
@@ -292,7 +315,16 @@
   flex: none;
   order: 1;
   flex-grow: 0;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
+}
+.tools h2 {
+  margin: 0 0 0.5em !important;
+}
+.language h2 {
+  margin: 0 0 0.5em !important;
+}
+.management h2 {
+  margin: 0 0 0.5em !important;
 }
 .langMag {
   width: 275px;
@@ -323,7 +355,7 @@
   }
 }
 .langMag ul li {
-  margin-left: 1em;
+  margin-right: 1em;
 }
 .mjmj {
   background: url(/akinn.png);
@@ -340,7 +372,7 @@
   width: 1072px;
 }
 .work h2 {
- font-family: "NewYork";
+  font-family: "NewYork";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -366,14 +398,14 @@
 }
 
 .aactive {
-  font-family: "Open Sans" !important;
-  font-style: normal !important;
-  font-weight: 600 !important;
-  font-size: 24px !important;
-  line-height: 33px !important;
-  letter-spacing: 0.07em !important;
+  font-family: "Open Sans";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 33px;
+  letter-spacing: 0.07em;
   color: #cccccc !important;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
   list-style: none;
   cursor: pointer;
 }
@@ -391,7 +423,7 @@
   line-height: 33px;
   letter-spacing: 0.07em;
   color: #333333;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
   cursor: pointer;
 }
 .progress {
@@ -456,7 +488,7 @@
   padding: 2em;
 }
 .placeDesc h3 {
-  font-family: "Sen", sans-serif;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -467,7 +499,7 @@
   color: #cccccc;
   align-items: center;
   height: 29px;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
 }
 .placeDesc h3 ul {
   padding: 0;
@@ -480,7 +512,7 @@
   border-radius: 50%;
 }
 .placeDesc h3 li {
-  font-family: "Sen", sans-serif;
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 700;
   font-size: 24px;
@@ -493,7 +525,7 @@
 }
 .placeDesc p {
   margin: 10px 0;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -506,6 +538,7 @@
   border: 1px solid #999999;
   flex: none;
   order: 0;
+  margin-top: 8px;
   margin-right: 1em;
   flex-grow: 0;
 }
@@ -514,7 +547,7 @@
 }
 .ccont ul li {
   display: flex;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
@@ -529,7 +562,7 @@
   width: 1072px;
 }
 .project h2 {
- font-family: "NewYork";
+  font-family: "NewYork";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -538,7 +571,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
 }
 
 .project > div {
@@ -583,7 +616,7 @@
 }
 .ttn ul li {
   margin-right: 2em;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -591,8 +624,8 @@
   color: #999999;
 }
 .ttn p {
- font-family: 'Open Sans';
-font-style: normal;
+  font-family: "Open Sans";
+  font-style: normal;
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
@@ -611,7 +644,7 @@ font-style: normal;
 .relBtnN {
   width: 100px;
   height: 35px;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -632,7 +665,7 @@ font-style: normal;
   background-color: transparent;
   border: 1px solid #cccccc;
   right: -3%;
-  bottom: -5%;
+  bottom: -10%;
   z-index: 1;
 }
 
@@ -642,7 +675,7 @@ font-style: normal;
   width: 1072px;
 }
 .blog h2 {
- font-family: "NewYork";
+  font-family: "NewYork";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
@@ -651,7 +684,7 @@ font-style: normal;
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin-bottom: 1em;
+  margin: 0 0 1em;
 }
 .blog .proCon {
   width: 100%;
@@ -683,7 +716,7 @@ font-style: normal;
 .contact p {
   width: 797px;
   margin: 1em auto;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   text-align: center;
   font-weight: 400;
@@ -705,7 +738,7 @@ font-style: normal;
   align-items: center;
   background: #000000;
   border: 1px solid #cccccc;
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
   font-size: 14px;
@@ -719,7 +752,7 @@ font-style: normal;
   background-color: transparent;
   border: 1px solid #cccccc;
   right: -3%;
-  bottom: -5%;
+  bottom: -10%;
   z-index: 1;
 }
 .contactBtn {
@@ -748,7 +781,7 @@ font-style: normal;
   text-align: center;
 }
 .footer p {
-  font-family: 'Open Sans';
+  font-family: "Open Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
@@ -881,7 +914,7 @@ font-style: normal;
     width: 100%;
   }
   .new {
-    height: 200px;
+    height: 170px;
     width: 100%;
   }
   .place ul {
@@ -954,7 +987,26 @@ font-style: normal;
     padding: 1em 0.3em;
   }
   .header {
-    padding: 4em 0 6em;
+    padding: 2em 0 6em;
+  }
+  .imgg {
+    margin-top: 5em;
+    display: none;
+  }
+  .imgg22 {
+    margin-top: 7em;
+  }
+
+  .imgg22 {
+    display: block;
+    width: 100%;
+    height: 490px;
+  }
+  .img22 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    object-fit: contain;
   }
 
   .about {
@@ -968,43 +1020,74 @@ font-style: normal;
   }
 
   .about h2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 39px;
   }
   .skill h2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 39px;
   }
   .work h2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 39px;
   }
   .project h2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 39px;
   }
   .blog h2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 39px;
   }
   .contact h2 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 32px;
-    line-height: 38px;
+    line-height: 39px;
   }
   .contact p {
     font-weight: 400;
     font-size: 14px;
     line-height: 19px;
   }
+  .about p {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
+  .skill p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .skill2 ul li {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 19px;
+  }
 
+  .aactive {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+  .nip {
+    width: 200px;
+  }
+  .nip2 {
+    width: 200px;
+  }
+  .workLi {
+    font-weight: 600 !important;
+    font-size: 16px !important;
+    line-height: 22px !important;
+  }
   .text h1 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 80px;
     line-height: 97.1%;
   }
@@ -1067,11 +1150,6 @@ font-style: normal;
     justify-content: center;
     align-items: center;
   }
-
-  .header img {
-    width: 490px;
-    margin-left: -5em;
-  }
   .skCon {
     width: 98%;
     margin: 0 auto 2em;
@@ -1097,8 +1175,15 @@ font-style: normal;
 }
 
 @media (max-width: 375px) {
+  .header {
+    margin-top: 0;
+    padding: 1em 0 4em;
+  }
+  .text {
+    padding-top: 0;
+  }
   .text h1 {
-    font-weight: 700;
+    font-weight: 400;
     font-size: 70px;
     line-height: 97.1%;
   }
@@ -1116,8 +1201,18 @@ font-style: normal;
   .j3 {
     transform: translateX(-60%);
   }
-  .header img {
-    width: 490px;
-    margin-left: -7em;
+  .imgg {
+    display: none;
+  }
+  .imgg22 {
+    display: block;
+    width: 100%;
+    height: 490px;
+  }
+  .img22 {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    object-fit: contain;
   }
 }
