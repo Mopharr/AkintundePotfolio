@@ -993,9 +993,6 @@
     margin-top: 5em;
     display: none;
   }
-  .imgg22 {
-    margin-top: 7em;
-  }
 
   .imgg22 {
     display: block;
@@ -1177,7 +1174,7 @@
 @media (max-width: 375px) {
   .header {
     margin-top: 0;
-    padding: 1em 0 4em;
+    padding: 3em 0 4em;
   }
   .text {
     padding-top: 0;
