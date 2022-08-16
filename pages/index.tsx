@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 
         <link rel="icon" href="/Favicon.png" />
       </Head>
-      {/* <Loading  /> */}
+      <Loading  />
       <main className={styles.main}>
         <nav className={styles.top}>
           <Link href="/">

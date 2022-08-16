@@ -1,11 +1,13 @@
 .container {
-  background-color: rebeccapurple;
+  background-color: #000;
   width: 100%;
   height: 100%;
   position: fixed;
   left: 0;
   top: 0;
   z-index: 111;
+  display: inline-block;
+  
 }
 
 .box {
@@ -77,15 +79,66 @@
   left: 50%;
   transform: translate(-50%, -50%);
   width: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  overflow-x: hidden;
+}
+.loading::after {
+  background-color: #000;
+  width: 400px;
+  height: 100px;
+  content: "";
+  position: absolute;
+  left: 20%;
+  animation-name: scroll;
+  animation-duration: 5s;
+  animation-delay: 6s;
+  display: inline-flex;
+  opacity: 1;
+
+}
+
+@keyframes scroll {
+  0% {
+    opacity: 1;
+     transform: translateX(15%);
+  }
+   25% {
+    opacity: 1;
+
+     transform: translateX(25%);
+  }
+   50% {
+    opacity: 1;
+
+     transform: translateX(50%);
+  }
+   75% {
+    opacity: 1;
+
+     transform: translateX(75%);
+  }
+   100% {
+    opacity: 1;
+
+     transform: translateX(100%);
+  }
 }
 
 .logoImg {
   height: 64px;
   width: 64px;
-  position: absolute;
+  /* position: absolute; */
   animation: Logo;
   animation-duration: 6s;
   /* animation-delay: 3s; */
+}
+
+.loading span {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fff;
 }
 
 @keyframes Logo {
