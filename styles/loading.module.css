@@ -7,7 +7,6 @@
   top: 0;
   z-index: 111;
   display: inline-block;
-  
 }
 
 .box {
@@ -18,24 +17,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  animation-name: Fade;
-  animation-duration: 3s;
+  opacity: 0;
 }
-
-@keyframes Fade {
-  0% {
-    opacity: 0;
-  }
-
-  50% {
-    opacity: 0.5;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
 .dot1 {
   position: absolute;
   width: 12px;
@@ -78,61 +61,37 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 500px;
+  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   overflow-x: hidden;
 }
-.loading::after {
+.cover {
   background-color: #000;
   width: 400px;
-  height: 100px;
+  height: 100%;
   content: "";
   position: absolute;
-  left: 20%;
-  animation-name: scroll;
-  animation-duration: 5s;
-  animation-delay: 6s;
+  left: 0%;
   display: inline-flex;
-  opacity: 1;
-
+  border: none;
 }
-
-@keyframes scroll {
-  0% {
-    opacity: 1;
-     transform: translateX(15%);
-  }
-   25% {
-    opacity: 1;
-
-     transform: translateX(25%);
-  }
-   50% {
-    opacity: 1;
-
-     transform: translateX(50%);
-  }
-   75% {
-    opacity: 1;
-
-     transform: translateX(75%);
-  }
-   100% {
-    opacity: 1;
-
-     transform: translateX(100%);
-  }
+.enter {
+  overflow-x: hidden;
+  width: 250px;
+  opacity: 0;
 }
-
 .logoImg {
   height: 64px;
   width: 64px;
-  /* position: absolute; */
-  animation: Logo;
-  animation-duration: 6s;
-  /* animation-delay: 3s; */
+  display: inline-flex;
+  transform: translateX(297%);
+}
+.aniText {
+  position: absolute;
+  right: 0;
+  z-index: -1;
 }
 
 .loading span {
@@ -141,19 +100,8 @@
   color: #fff;
 }
 
-@keyframes Logo {
-  0% {
-    opacity: 0;
-    left: 50%;
-    transform: translateX(-50%);
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  100% {
-    opacity: 1;
-    left: 0%;
-  }
+@media (max-width: 500px) {
+    .logoImg{
+        transform: translateX(157%);
+    }
 }
