@@ -4,17 +4,23 @@ import { useRef, useEffect } from "react";
 
 const Loading = () => {
   const Logo: any = useRef();
-  const LogoMove: any = useRef()
+  const LogoMove: any = useRef();
   const LogoImgg: any = useRef();
   const boxLine: any = useRef();
-  const cover: any = useRef()
+  const cover: any = useRef();
+  const cover1: any = useRef();
+  const cover2: any = useRef();
+  const cover3: any = useRef();
 
   useEffect(() => {
-    gsap.to(boxLine.current, { opacity: 1, duration: 3 }, 2.5);
-    gsap.to(LogoImgg.current, { duration: 3, opacity: 1 }, 4);
-    gsap.to(LogoMove.current, { duration: 3, x: "0%" }, 6);
-    gsap.to(cover.current, { duration: 3, x: "50%" }, 8);
-    gsap.to(Logo.current, { y: "-100%" }, 10.8);
+    gsap.to(boxLine.current, { opacity: 1, duration: 3 , delay: 2.5});
+    gsap.to(LogoImgg.current, { duration: 3, opacity: 1, delay: 4 });
+    gsap.to(LogoMove.current, { duration: 3, x: "0%", delay: 6 });
+    gsap.to(cover.current, { duration: 1.5, x: "100%", delay: 8});
+    gsap.to(cover1.current, { duration: 1.5, x: "100%", delay: 9 });
+    gsap.to(cover2.current, { duration: 1.5, x: "100%" , delay: 10});
+    gsap.to(cover3.current, { duration: 1.5, x: "100%", delay: 11 });
+    gsap.to(Logo.current, { y: "-100%", delay: 12 });
   }, [gsap]);
 
   return (
@@ -34,9 +40,24 @@ const Loading = () => {
             ref={LogoMove}
           />
         </div>
-        <div className={styles.aniText} >
-          <div className={styles.cover} ref={cover}></div>
-          <span>C</span> <span>R</span> <span>I</span> <span>X </span>
+
+        <div className={styles.aniText}>
+          <div className={styles.span1}>
+            <div className={styles.cover} ref={cover}></div>
+            <span>C</span>
+          </div>
+          <div className={styles.span1}>
+            <div className={styles.cover} ref={cover1}></div>
+            <span>R</span>
+          </div>
+          <div className= {styles.span2}>
+            <div className={styles.cover} ref={cover2}></div>
+            <span>I</span>
+          </div>
+          <div className= {styles.span1}>
+            <div className={styles.cover} ref={cover3}></div>
+            <span>X</span>
+          </div>
         </div>
       </div>
     </div>
