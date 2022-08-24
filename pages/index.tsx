@@ -6,7 +6,7 @@ import { FaLinkedinIn, FaTwitter, FaBehance, FaTimes } from "react-icons/fa";
 import { SiMedium } from "react-icons/si";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SetStateAction, useState } from "react";
-// import Fade from 'react-reveal'
+import Loading from "../components/loading";
 const Home: NextPage = () => {
   const [slide, setSlide] = useState("1");
   const [open, setOpen] = useState(false);
@@ -32,7 +32,7 @@ const Home: NextPage = () => {
 
         <link rel="icon" href="/Favicon.png" />
       </Head>
-
+      <Loading  />
       <main className={styles.main}>
         <nav className={styles.top}>
           <Link href="/">
@@ -71,7 +71,10 @@ const Home: NextPage = () => {
               <p>Product Designer</p>
             </div>
             <div className={styles.imgg}>
-              <img src="/headImg.png" alt="header" className={styles.img} />
+              <img src="/jiji.png" alt="header" className={styles.img} />
+            </div>
+            <div className={styles.imgg22}>
+              <img src="/mobile.png" alt="mobileImg" className={styles.img22} />
             </div>
           </div>
 
@@ -251,7 +254,9 @@ const Home: NextPage = () => {
                     id="2"
                     onClick={click}
                     className={`${
-                      slide === "2" ? `${styles.aactive} ` : styles.workLi
+                      slide === "2"
+                        ? `${styles.aactive} ${styles.nip}`
+                        : `${styles.workLi} ${styles.nip2}`
                     }`}
                   >
                     02 Nippyeats Inc.

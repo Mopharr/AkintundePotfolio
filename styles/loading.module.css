@@ -1,0 +1,145 @@
+.container {
+  background-color: #000;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 111;
+  display: inline-block;
+}
+
+.box {
+  position: absolute;
+  height: 90%;
+  width: 90%;
+  border: #fff solid 1px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+}
+.dot1 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -5px;
+  top: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+
+.dot2 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  top: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+.dot3 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  left: -5px;
+  bottom: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+.dot4 {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  right: -5px;
+  bottom: -5px;
+  background: #cccccc;
+  border: 1px solid #cccccc;
+}
+.loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 100%;
+  width: 250px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  overflow-x: hidden;
+}
+
+.enter {
+  /* overflow-x: hidden; */
+  /* width: 300px; */
+  position: absolute;
+  z-index: 11;
+  opacity: 0;
+}
+.logoImg {
+  height: 64px;
+  width: 64px;
+  display: inline-flex;
+  transform: translateX(297%);
+}
+.aniText {
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  display: flex;
+}
+
+.loading span {
+  font-size: 64px;
+  font-weight: bold;
+  color: #fff;
+}
+.span1 {
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  margin-right: .3em;
+  overflow-x: hidden;
+  position: relative;
+}
+.span2 {
+  width: 30px;
+   display: flex;
+  justify-content: center;
+  margin-right: .3em;
+  overflow-x: hidden;
+  position: relative;
+}
+.cover {
+  background-color: #000;
+  width: 60px;
+  height: 100%;
+  content: "";
+  position: absolute;
+  left: 0%;
+  display: inline-flex;
+  border: none;
+}
+
+@media (max-width: 450px) {
+  .logoImg {
+    transform: translateX(157%);
+  }
+  .loading{
+    width: 170px;
+  }
+  .logoImg{
+    height: 34px;
+    width: 34px;
+  }
+  .loading span{
+    font-size: 40px;
+  }
+  .span1{
+    width: 30px;
+  }
+  .span2{
+    width: 20px;
+  }
+
+}
