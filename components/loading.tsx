@@ -21,7 +21,7 @@ const Loading = () => {
     gsap.to(cover2.current, { duration: 1.5, x: "100%" , delay: 10});
     gsap.to(cover3.current, { duration: 1.5, x: "100%", delay: 11 });
     gsap.to(Logo.current, { y: "-100%", delay: 12 });
-  }, [gsap]);
+  }, []);
 
   return (
     <div className={styles.container} ref={Logo}>
