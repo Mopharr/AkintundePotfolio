@@ -20,7 +20,7 @@ const Loading = () => {
     gsap.to(cover1.current, { duration: 1.5, x: "100%", delay: 9 });
     gsap.to(cover2.current, { duration: 1.5, x: "100%", delay: 10 });
     gsap.to(cover3.current, { duration: 1.5, x: "100%", delay: 11 });
-    gsap.to(Logo.current, { opacity: 0, duration: 1.5, delay: 12 });
+    gsap.to(Logo.current, { y: "-100%", duration: 1.5, delay: 12 });
   }, []);
 
   return (
