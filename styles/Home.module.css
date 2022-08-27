@@ -4,7 +4,7 @@
 
 @font-face {
   font-family: "NewYork";
-  src: url(../styles/FontsFree-Net-NewYork.ttf);
+  src: url(https://res.cloudinary.com/retyner-technologies/raw/upload/v1661640113/akintunde/FontsFree-Net-NewYork_we1qcf.ttf);
 }
 
 .main {
@@ -358,7 +358,7 @@
   margin-right: 1em;
 }
 .mjmj {
-  background: url(/akinn.png);
+  background: url(https://res.cloudinary.com/retyner-technologies/image/upload/v1661639553/akintunde/akinn_nwz7wh.png);
   width: 463px;
   height: 457px;
   margin-left: auto;

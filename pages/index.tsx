@@ -7,6 +7,9 @@ import { SiMedium } from "react-icons/si";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { SetStateAction, useState } from "react";
 import Loading from "../components/loading";
+
+
+
 const Home: NextPage = () => {
   const [slide, setSlide] = useState("1");
   const [open, setOpen] = useState(false);
@@ -24,20 +27,23 @@ const Home: NextPage = () => {
       <Head>
         <title>Akintunde Caulcrick</title>
         <meta name="description" content="I am a product Designer" />
-        <meta
-          name="viewport"
-          content="width= devies-width, initial-scale = 1.0"
-        />
+       
         <meta name="theme-color" content="#000" />
 
-        <link rel="icon" href="/Favicon.png" />
+        <link
+          rel="icon"
+          href="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639552/akintunde/Favicon_hdtm1e.png"
+        />
       </Head>
       <Loading  />
       <main className={styles.main}>
         <nav className={styles.top}>
           <Link href="/">
             <a>
-              <img src="/crix.png" alt="logo" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639550/akintunde/crix_uzwgfs.png"
+                alt="logo"
+              />
             </a>
           </Link>
           <div className={`${open ? styles.overAct : styles.over}`}>
@@ -71,10 +77,18 @@ const Home: NextPage = () => {
               <p>Product Designer</p>
             </div>
             <div className={styles.imgg}>
-              <img src="/jiji.png" alt="header" className={styles.img} />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639567/akintunde/jiji_v7xszi.png"
+                alt="header"
+                className={styles.img}
+              />
             </div>
             <div className={styles.imgg22}>
-              <img src="/mobile.png" alt="mobileImg" className={styles.img22} />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639564/akintunde/mobile_ah67re.png"
+                alt="mobileImg"
+                className={styles.img22}
+              />
             </div>
           </div>
 
@@ -114,7 +128,10 @@ const Home: NextPage = () => {
             <div className={styles.skCon}>
               <div className={styles.dot1}></div>
               <div className={styles.dot2}></div>
-              <img src="/wire.png" alt="wireframe" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639553/akintunde/wire_jub7ny.png"
+                alt="wireframe"
+              />
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
               <p>Wireframing</p>
@@ -122,7 +139,10 @@ const Home: NextPage = () => {
             <div className={styles.skCon}>
               <div className={styles.dot1}></div>
               <div className={styles.dot2}></div>
-              <img src="/prototype.png" alt="prototype" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639551/akintunde/prototype_gpq8ka.png"
+                alt="prototype"
+              />
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
               <p>Prototyping</p>
@@ -130,7 +150,10 @@ const Home: NextPage = () => {
             <div className={styles.skCon}>
               <div className={styles.dot1}></div>
               <div className={styles.dot2}></div>
-              <img src="/responsive.png" alt="UI" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639550/akintunde/responsive_tv9cg0.png"
+                alt="UI"
+              />
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
               <p>UI Design</p>
@@ -138,7 +161,10 @@ const Home: NextPage = () => {
             <div className={styles.skCon}>
               <div className={styles.dot1}></div>
               <div className={styles.dot2}></div>
-              <img src="/design.png" alt="UX" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639549/akintunde/design_rpmwpd.png"
+                alt="UX"
+              />
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
               <p>UX Design</p>
@@ -392,7 +418,10 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <img src="/tor.png" alt="project" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639553/akintunde/tor_fg5wyx.png"
+                alt="project"
+              />
               <div className={styles.ttn}>
                 <h3>Trove Finance, Lagos Nigeria</h3>
                 <ul>
@@ -418,7 +447,10 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <img src="/tea.png" alt="project" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639553/akintunde/tea_v1e41h.png"
+                alt="project"
+              />
               <div className={styles.ttn}>
                 <h3>Trove Finance, Lagos Nigeria</h3>
                 <ul>
@@ -446,7 +478,10 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <img src="/tor.png" alt="project" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639553/akintunde/tor_fg5wyx.png"
+                alt="project"
+              />
               <div className={styles.ttn}>
                 <h3>Trove Finance, Lagos Nigeria</h3>
                 <ul>
@@ -472,7 +507,10 @@ const Home: NextPage = () => {
               <div className={styles.dot2}></div>
               <div className={styles.dot3}></div>
               <div className={styles.dot4}></div>
-              <img src="/tea.png" alt="project" />
+              <img
+                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639553/akintunde/tea_v1e41h.png"
+                alt="project"
+              />
               <div className={styles.ttn}>
                 <h3>Trove Finance, Lagos Nigeria</h3>
                 <ul>
@@ -502,7 +540,10 @@ const Home: NextPage = () => {
             <div className={styles.dot2}></div>
             <div className={styles.dot3}></div>
             <div className={styles.dot4}></div>
-            <img src="/tor.png" alt="project" />
+            <img
+              src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639553/akintunde/tor_fg5wyx.png"
+              alt="project"
+            />
             <div className={styles.ttn}>
               <h3>Trove Finance, Lagos Nigeria</h3>
               <ul>

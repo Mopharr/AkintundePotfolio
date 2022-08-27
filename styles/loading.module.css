@@ -7,6 +7,7 @@
   top: 0;
   z-index: 111;
   display: inline-block;
+  opacity: 1;
 }
 
 .box {
@@ -70,8 +71,6 @@
 }
 
 .enter {
-  /* overflow-x: hidden; */
-  /* width: 300px; */
   position: absolute;
   z-index: 11;
   opacity: 0;
@@ -98,15 +97,15 @@
   width: 40px;
   display: flex;
   justify-content: center;
-  margin-right: .3em;
+  margin-right: 0.3em;
   overflow-x: hidden;
   position: relative;
 }
 .span2 {
   width: 30px;
-   display: flex;
+  display: flex;
   justify-content: center;
-  margin-right: .3em;
+  margin-right: 0.3em;
   overflow-x: hidden;
   position: relative;
 }
@@ -125,21 +124,20 @@
   .logoImg {
     transform: translateX(157%);
   }
-  .loading{
+  .loading {
     width: 170px;
   }
-  .logoImg{
+  .logoImg {
     height: 34px;
     width: 34px;
   }
-  .loading span{
+  .loading span {
     font-size: 40px;
   }
-  .span1{
+  .span1 {
     width: 30px;
   }
-  .span2{
+  .span2 {
     width: 20px;
   }
-
 }
