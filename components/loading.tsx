@@ -16,11 +16,11 @@ const Loading = () => {
     gsap.to(boxLine.current, { opacity: 1, duration: 3, delay: 2.5 });
     gsap.to(LogoImgg.current, { duration: 3, opacity: 1, delay: 4 });
     gsap.to(LogoMove.current, { duration: 3, x: "0%", delay: 6 });
-    gsap.to(cover.current, { duration: 1.5, x: "100%", delay: 8 });
-    gsap.to(cover1.current, { duration: 1.5, x: "100%", delay: 9 });
-    gsap.to(cover2.current, { duration: 1.5, x: "100%", delay: 10 });
-    gsap.to(cover3.current, { duration: 1.5, x: "100%", delay: 11 });
-    gsap.to(Logo.current, { y: "-100%", duration: 1.5, delay: 12 });
+    gsap.to(cover.current, { duration: 1.5, x: "100%", delay: 9 });
+    gsap.to(cover1.current, { duration: 1.5, x: "100%", delay: 10 });
+    gsap.to(cover2.current, { duration: 1.5, x: "100%", delay: 11 });
+    gsap.to(cover3.current, { duration: 1.5, x: "100%", delay: 12 });
+    gsap.to(Logo.current, { y: "-100%", duration: 1.5, delay: 13 });
   }, []);
 
   return (
@@ -44,19 +44,31 @@ const Loading = () => {
         <div className={styles.aniText}>
           <div className={styles.span1}>
             <div className={styles.cover} ref={cover}></div>
-            <span>C</span>
+            <img
+              src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661956428/akintunde/C_lewpse.png"
+              alt=""
+            />
           </div>
           <div className={styles.span1}>
             <div className={styles.cover} ref={cover1}></div>
-            <span>R</span>
+            <img
+              src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661956445/akintunde/R_dfw5nm.png"
+              alt=""
+            />
           </div>
           <div className={styles.span2}>
             <div className={styles.cover} ref={cover2}></div>
-            <span>I</span>
+            <img
+              src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661956428/akintunde/I_bx8erz.png"
+              alt=""
+            />
           </div>
           <div className={styles.span1}>
             <div className={styles.cover} ref={cover3}></div>
-            <span>X</span>
+            <img
+              src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661956428/akintunde/X_jg8j1s.png"
+              alt=""
+            />
           </div>
         </div>
       </div>

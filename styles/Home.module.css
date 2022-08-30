@@ -13,13 +13,23 @@
   margin: auto;
   background: #000000;
 }
+.stick {
+  position: fixed;
+  background-color: #000000;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  padding: 1em 0;
+}
 
 .top {
   display: flex;
   justify-content: space-between;
   align-items: center;
   background: #000000;
-  height: 60px;
+  max-width: 1140px;
+  margin: auto;
 }
 .navLink ul {
   display: flex;
@@ -381,7 +391,7 @@
   flex: none;
   order: 0;
   flex-grow: 0;
-  margin: 0;
+  margin: 0 0 1em;
 }
 .experience {
   display: flex;
@@ -393,11 +403,12 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  height: 297px;
+  height: 204px;
   justify-content: space-between;
 }
 
 .aactive {
+  list-style: none;
   font-family: "Open Sans";
   font-style: normal;
   font-weight: 600;
@@ -405,14 +416,15 @@
   line-height: 33px;
   letter-spacing: 0.07em;
   color: #cccccc !important;
-  margin: 0 0 1em;
-  list-style: none;
+  /* height: 80px; */
+  margin-bottom: 1em;
+
   cursor: pointer;
 }
 .place ul {
   padding: 0;
   margin: 0;
-  height: 206px;
+  height: 100%;
 }
 .place ul .workLi {
   list-style: none;
@@ -423,12 +435,14 @@
   line-height: 33px;
   letter-spacing: 0.07em;
   color: #333333;
-  margin: 0 0 1em;
+  /* height: 80px; */
+  margin-bottom: 1em;
+
   cursor: pointer;
 }
 .progress {
   border: 4px solid #333333;
-  height: 206px;
+  height: 204px;
   border-radius: 10px;
   margin-right: 1em;
   position: relative;
@@ -479,13 +493,14 @@
   display: flex;
   align-items: flex-start;
   justify-content: center;
+  height: 100%;
 }
 .placeDesc {
   width: 614px;
   height: 340px;
   position: relative;
   border: 1px solid #cccccc;
-  padding: 2em;
+  padding: 1em;
 }
 .placeDesc h3 {
   font-family: "Open Sans";
@@ -827,6 +842,12 @@
   }
 }
 
+@media (max-width: 1140px) {
+  .top {
+    max-width: 98%;
+  }
+}
+
 @media (max-width: 1083px) {
   .text h1 {
     font-size: 100px;
@@ -982,12 +1003,12 @@
     margin-right: 1em;
   }
 }
-@media (max-width: 530px) {
+@media (max-width: 560px) {
   .main {
     padding: 1em 0.3em;
   }
   .header {
-    padding: 2em 0 6em;
+    padding: 6em 0 6em;
   }
   .imgg {
     margin-top: 5em;
@@ -998,9 +1019,9 @@
     display: block;
     width: 100%;
     height: 490px;
-
+    margin-top: 5em;
   }
-  .text{
+  .text {
     height: 170px;
     padding: 0;
   }
@@ -1016,6 +1037,7 @@
   }
   .placeDesc {
     padding: 2em 1em;
+    margin: -6em auto 0;
   }
   .ttn {
     padding: 0em 1em;
@@ -1128,7 +1150,7 @@
     height: 100vh;
     position: fixed;
     bottom: 0;
-    top: 14%;
+    top: 7%;
     z-index: 22;
     left: 0;
     transition: all 1s ease-in-out;
@@ -1175,11 +1197,16 @@
     padding: 2em 0;
   }
 }
+@media (max-width: 500px) {
+  .imgg22 {
+    margin-top: 1em;
+  }
+}
 
 @media (max-width: 375px) {
   .header {
     margin-top: 0;
-    padding: 3em 0 4em;
+    padding: 6em 0 4em;
   }
   .text {
     padding-top: 0;

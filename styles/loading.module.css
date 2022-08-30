@@ -62,7 +62,7 @@
   left: 50%;
   transform: translate(-50%, -50%);
   height: 100%;
-  width: 250px;
+  width: 280px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -87,30 +87,33 @@
   display: flex;
 }
 
-.loading span {
-  font-size: 64px;
-  font-weight: bold;
-  color: #fff;
+.span1 img {
+  height: 64px;
+  width: 64px;
+}
+.span2 img {
+  height: 64px;
+  width: 64px;
 }
 .span1 {
-  width: 40px;
+  width: 64px;
+  height: 64px;
   display: flex;
   justify-content: center;
-  margin-right: 0.3em;
   overflow-x: hidden;
   position: relative;
 }
 .span2 {
-  width: 30px;
+  width: 20px;
+  height: 64px;
   display: flex;
   justify-content: center;
-  margin-right: 0.3em;
   overflow-x: hidden;
   position: relative;
 }
 .cover {
   background-color: #000;
-  width: 60px;
+  width: 64px;
   height: 100%;
   content: "";
   position: absolute;
@@ -121,7 +124,7 @@
 
 @media (max-width: 450px) {
   .logoImg {
-    transform: translateX(157%);
+    transform: translateX(270%);
   }
   .loading {
     width: 170px;
@@ -130,13 +133,37 @@
     height: 34px;
     width: 34px;
   }
+  .span1  {
+    height: 60px;
+    width: 34px;
+  }
+  .span2  {
+    height: 60px;
+    width: 10px;
+  }
+  .span1 img{
+    width: 100%;
+    height: 100%;
+  }
+  .span2 img{
+    width: 100%;
+    height: 100%;
+  }
+  .cover {
+    height: 60px;
+    width: 34px;
+  }
   .loading span {
     font-size: 40px;
   }
+  .aniText {
+  gap: 0.2em;
+
+  }
   .span1 {
-    width: 30px;
+  
   }
   .span2 {
-    width: 20px;
+
   }
 }

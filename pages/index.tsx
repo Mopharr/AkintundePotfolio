@@ -36,39 +36,68 @@ const Home: NextPage = () => {
       </Head>
       <Loading />
       <main className={styles.main}>
-        <nav className={styles.top}>
-          <Link href="/">
-            <a>
-              <img
-                src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639550/akintunde/crix_uzwgfs.png"
-                alt="logo"
-              />
-            </a>
-          </Link>
-          <div className={`${open ? styles.overAct : styles.over}`}>
-            <div className={styles.navLink}>
-              <ul>
-                <li>About</li>
-                <li>Experience</li>
-                <li>Project</li>
-                <li>Blog</li>
-                <li>Resume</li>
-                <div className={styles.navBtn}>
-                  <button className={styles.nBtn}>Get In Touch</button>
-                  <button className={styles.nbtn}></button>
-                </div>
-              </ul>
+        <div className={styles.stick}>
+          <nav className={styles.top}>
+            <Link href="/">
+              <a>
+                <img
+                  src="https://res.cloudinary.com/retyner-technologies/image/upload/v1661639550/akintunde/crix_uzwgfs.png"
+                  alt="logo"
+                />
+              </a>
+            </Link>
+            <div className={`${open ? styles.overAct : styles.over}`}>
+              <div className={styles.navLink}>
+                <ul>
+                  <li onClick={() => setOpen(false)}>
+                    <Link href="#about">
+                      <a> About</a>
+                    </Link>
+                  </li>
+                  <li onClick={() => setOpen(false)}>
+                    <Link href="#expirence">
+                      <a> Experience</a>
+                    </Link>
+                  </li>
+                  <li onClick={() => setOpen(false)}>
+                    <Link href="#project">
+                      <a> Project</a>
+                    </Link>
+                  </li>
+                  <li onClick={() => setOpen(false)}>
+                    <Link href="#blog">
+                      <a> Blog</a>
+                    </Link>
+                  </li>
+                  <li onClick={() => setOpen(false)}>
+                    <Link href="">
+                      <a> Resume</a>
+                    </Link>
+                  </li>
+                  <div className={styles.navBtn}>
+                    <button
+                      className={styles.nBtn}
+                      onClick={() => setOpen(false)}
+                    >
+                      <Link href="#get">
+                        <a> Get In Touch</a>
+                      </Link>
+                    </button>
+                    <button className={styles.nbtn}></button>
+                  </div>
+                </ul>
+              </div>
             </div>
-          </div>
 
-          <div className={styles.ham}>
-            {open ? (
-              <FaTimes onClick={toggleOpen} />
-            ) : (
-              <GiHamburgerMenu onClick={toggleOpen} />
-            )}
-          </div>
-        </nav>
+            <div className={styles.ham}>
+              {open ? (
+                <FaTimes onClick={toggleOpen} />
+              ) : (
+                <GiHamburgerMenu onClick={toggleOpen} />
+              )}
+            </div>
+          </nav>
+        </div>
         <header className={styles.header}>
           <div className={styles.headerDiv}>
             <Bounce>
@@ -92,6 +121,7 @@ const Home: NextPage = () => {
                 className={styles.img22}
               />
             </div>
+            <div id="about"></div>
           </div>
 
           <section className={styles.link}>
@@ -126,7 +156,6 @@ const Home: NextPage = () => {
             <div className={styles.dot4}></div>
           </section>
         </Bounce>
-
         <section className={styles.skill}>
           <h2>Skills</h2>
           <div className={styles.sk}>
@@ -249,16 +278,18 @@ const Home: NextPage = () => {
                 <div className={styles.dot1}></div>
                 <div className={styles.dot2}></div>
                 <div className={styles.dot3}></div>
-                <div className={styles.dot4}></div>
+                <div id="expirence" className={styles.dot4}></div>
               </div>
             </Bounce>
           </div>
         </section>
+
         <section className={styles.work}>
+          <h2>Where I’ve worked</h2>
+
           <div className={styles.experience}>
             <Bounce right>
               <div className={styles.new}>
-                <h2>Where I’ve worked</h2>
                 <div className={styles.place}>
                   <div className={styles.progress}>
                     <div
@@ -359,6 +390,12 @@ const Home: NextPage = () => {
                           elit. Est cursus enim ultricies nisl arcu pellentesque
                           et. Sed non cursus magna in tellus.
                         </li>
+                        <li>
+                          <div className={styles.ddot}></div>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Est cursus enim ultricies nisl arcu pellentesque
+                          et. Sed non cursus magna in tellus.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -369,6 +406,12 @@ const Home: NextPage = () => {
                     <p>Jun 2021 - Present</p>
                     <div className={styles.ccont}>
                       <ul>
+                        <li>
+                          <div className={styles.ddot}></div>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Est cursus enim ultricies nisl arcu pellentesque
+                          et. Sed non cursus magna in tellus.
+                        </li>
                         <li>
                           <div className={styles.ddot}></div>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -403,6 +446,12 @@ const Home: NextPage = () => {
                           elit. Est cursus enim ultricies nisl arcu pellentesque
                           et. Sed non cursus magna in tellus.
                         </li>
+                        <li>
+                          <div className={styles.ddot}></div>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Est cursus enim ultricies nisl arcu pellentesque
+                          et. Sed non cursus magna in tellus.
+                        </li>
                       </ul>
                     </div>
                   </div>
@@ -421,6 +470,12 @@ const Home: NextPage = () => {
                         </li>
                         <li>
                           <div className={styles.ddot}></div>
+                          Lorem ipsum dolor sit amet, consectetur adipiscing
+                          elit. Est cursus enim ultricies nisl arcu pellentesque
+                          et. Sed non cursus magna in tellus.
+                        </li>
+                        <li>
+                          <div id="project" className={styles.ddot}></div>
                           Lorem ipsum dolor sit amet, consectetur adipiscing
                           elit. Est cursus enim ultricies nisl arcu pellentesque
                           et. Sed non cursus magna in tellus.
@@ -560,6 +615,7 @@ const Home: NextPage = () => {
                     <button className={styles.nbn}></button>
                   </div>
                 </div>
+                <div id="blog"></div>
               </div>
             </Bounce>
           </div>
@@ -596,9 +652,9 @@ const Home: NextPage = () => {
                 </div>
               </div>
             </div>
+            <div id="get"></div>
           </Bounce>
         </section>
-
         <section className={styles.contact}>
           <Bounce left>
             <h2>Let’s Create Something Together</h2>
@@ -618,7 +674,6 @@ const Home: NextPage = () => {
             </div>
           </Bounce>
         </section>
-
         <footer className={styles.footer}>
           <section className={styles.link}>
             <FaBehance className={styles.icon} />
